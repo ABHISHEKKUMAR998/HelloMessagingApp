@@ -23,9 +23,8 @@ public class HelloWorldController {
     	return "Hello" + " " +name + "From " + "BridgeLaz";
     	
     }
-    @GetMapping("/param/(name)")
-    public String satHelloParam(@PathVariable String name)
-    {
-    	return "Hello"+name  +"!";
+    @GetMapping("/param/{name}")
+    public String helloParam(@PathVariable String name){
+        return "Hello " + name +" !!";
     }
 }
